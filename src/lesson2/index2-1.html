@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The HTML5 Template</title>
+</head>
+
+<body>
+<div>
+    <h1 id="title">Title</h1>
+    <p>Lorem ipsum </p>
+    <div id="features">
+        <ul id="list">
+            <li>1. Feature </li>
+            <li>2. Feature </li>
+            <li>3. Feature </li>
+        </ul>
+    </div>
+    <div id="footer">
+        <strong>JS Course</strong> Task.
+    </div>
+</div>
+<script type="module">
+    import { getPath } from './index2-1.js';
+    let selectedNode = document.getElementById('list');
+    getPath(selectedNode);
+</script>
+</body>
+</html>
