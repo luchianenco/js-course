@@ -2,7 +2,7 @@ var curry = function (val) {
     var acc = val;
 
     var inner = function (nextVal) {
-        if (nextVal) {
+        if (arguments.length) {
             acc += nextVal;
         } else {
             console.log(acc);
