@@ -40,6 +40,7 @@ export function getPath(node) {
                 path += '#' + nodePath[i].id;
             } else if (nodePath[i].hasOwnProperty('class')) {
                 path += '.' + nodePath[i].class;
+                path += ':nth-child(' + nodePath[i].childIndex + ')';
             } else {
                 path += ':nth-child(' + nodePath[i].childIndex + ')';
             }
