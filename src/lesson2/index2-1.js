@@ -15,6 +15,10 @@ export function getPath(node) {
             if (currentNode.getAttribute('class')) {
                 nodeInfo.class = currentNode.getAttribute('class');
             }
+
+            nodeInfo.childIndex = [].indexOf.call(currentNode.parentNode.children, currentNode);
+
+
             nodePath.push(nodeInfo);
             return nodeBubling(currentNode.parentElement, nodePath);
         }
@@ -36,9 +40,11 @@ export function getPath(node) {
                 path += '#' + nodePath[i].id;
             } else if (nodePath[i].hasOwnProperty('class')) {
                 path += '.' + nodePath[i].class;
+            } else {
+                path += ':nth-child(' + nodePath[i].childIndex + ')';
             }
             if (i > 0) {
-                path += '>';
+                path += ' > ';
             }
         }
 
@@ -47,4 +53,5 @@ export function getPath(node) {
 
     nodeBubling(node, nodePath);
     console.log(printPath(nodePath));
+    console.log(document.querySelector(printPath(nodePath)));
 }
