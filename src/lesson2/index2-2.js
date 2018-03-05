@@ -6,7 +6,10 @@ function promiseReduce(tasks, sumFn, startValue) {
             )
         );
     }, Promise.resolve([])).then(results => {
-        return sumFn(results, startValue);
+        let sum = results.reduce((acc, value) => {
+            return acc + value + startValue;
+        }, 0);
+        return sumFn(sum);
     });
 }
 
@@ -15,12 +18,7 @@ let promise0 = () => Promise.resolve(0),
     promise1 = () => Promise.resolve(1),
     promise2 = () => Promise.resolve(2);
 
-let sumFn = (values, startValue = 0) => {
-    let sum = startValue;
-    values.forEach(value => {
-        sum += value;
-    });
-
+let sumFn = (sum) => {
     return Promise.resolve(sum);
 };
 
