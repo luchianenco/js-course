@@ -15,13 +15,19 @@
             <li>3. Feature </li>
         </ul>
     </div>
+    <div>
+        <div class="content">
+            <div id="sidebar">Home</div>
+            <div id="settings">Settings</div>
+        </div>
+    </div>
     <div id="footer">
         <strong>JS Course</strong> Task.
     </div>
 </div>
 <script type="module">
     import { getPath } from './index2-1.js';
-    let selectedNode = document.getElementById('list');
+    let selectedNode = document.getElementById('settings');
     getPath(selectedNode);
 </script>
 </body>

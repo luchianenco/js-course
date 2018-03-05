@@ -17,7 +17,7 @@ export function getPath(node) {
             }
 
             nodeInfo.childIndex = [].indexOf.call(currentNode.parentNode.children, currentNode);
-
+            nodeInfo.childIndex++;
 
             nodePath.push(nodeInfo);
             return nodeBubling(currentNode.parentElement, nodePath);
