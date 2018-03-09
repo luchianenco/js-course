@@ -14,7 +14,7 @@ const promisify = function(func) {
                     if (values.length > 0) {
                         resolve(...values);
                     } else {
-                        resolve(true);
+                        resolve();
                     }
                 });
             } catch (err) {
