@@ -1,0 +1,19 @@
+{
+  "name": "js-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lesson4": "node src/lesson04/index.promisify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luchianenco/js-course.git"
+  },
+  "author": "Serghei Luchianenco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luchianenco/js-course/issues"
+  },
+  "homepage": "https://github.com/luchianenco/js-course#readme"
+}

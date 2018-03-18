@@ -4,7 +4,7 @@ const util = require('util');
 
 const promiseReadDir = util.promisify(fs.readdir);
 const promiseStat = util.promisify(fs.stat);
-const homeDir = '../';
+const homeDir = process.argv[2] ? process.argv[2] : __dirname;
 
 function listFiles(filepath) {
     const results = {
