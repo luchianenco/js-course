@@ -5,21 +5,17 @@ const promisify = function(func) {
         const args = arguments;
 
         return new Promise(function (resolve, reject) {
-            try {
-                func.call(this, ...args, (err, ...values) => {
-                    if (err) {
-                        return reject(err);
-                    }
+            func.call(this, ...args, (err, ...values) => {
+                if (err) {
+                    return reject(err);
+                }
 
-                    if (values.length > 0) {
-                        resolve(...values);
-                    } else {
-                        resolve();
-                    }
-                });
-            } catch (err) {
-                reject(err);
-            }
+                if (values.length > 0) {
+                    resolve(...values);
+                } else {
+                    resolve();
+                }
+            });
         })
     }
 };
