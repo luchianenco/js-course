@@ -13,28 +13,29 @@ function listFiles(filepath) {
     };
     return promiseStat(filepath)
         .then(stats => {
-            if (stats.isDirectory()) {
-                results.folders.push(filepath);
-                return promiseReadDir(filepath)
-                    .then(childNames => childNames.sort())
-                    .then(sortedNames =>
-                        Promise.all(
-                            sortedNames.map(childName =>
-                                listFiles(path.resolve(filepath, childName))
-                            )
-                        )
-                    )
-                    .then(subtrees => {
-                        subtrees.forEach(subtree => {
-                            results.files = results.files.concat(subtree.files);
-                            results.folders = results.folders.concat(subtree.folders);
-                        });
-                        return results;
-                    });
-            } else {
+            if (! stats.isDirectory()) {
                 results.files.push(filepath);
                 return results;
             }
+
+            results.folders.push(filepath);
+            return promiseReadDir(filepath)
+                .then(childNames => childNames.sort())
+                .then(sortedNames =>
+                    Promise.all(
+                        sortedNames.map(childName =>
+                            listFiles(path.resolve(filepath, childName))
+                        )
+                    )
+                )
+                .then(subtrees => {
+                    subtrees.forEach(subtree => {
+                        results.files = results.files.concat(subtree.files);
+                        results.folders = results.folders.concat(subtree.folders);
+                    });
+                    return results;
+                });
+
         });
 }
 
