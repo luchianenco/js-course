@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The HTML5 Template</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <h1 id="title">Title</h1>
+    <p>Lorem ipsum </p>
+    <div>
+        <ul id="list">
+            <li>1. Feature </li>
+            <li>2. Feature </li>
+            <li>3. Feature </li>
+        </ul>
+    </div>
+    <div>
+        <div class="content" style="border:1px">
+            <div id="sidebar">Home</div>
+            <div id="settings">Settings</div>
+        </div>
+        <div class="content" style="border:1px; position:relative; top: 20px">
+            <div id="secondContent">Hello</div>
+        </div>
+    </div>
+    <div id="footer">
+        <strong>JS Course</strong> Task.
+    </div>
+</div>
+<script type="module">
+    import { intersect } from './index.js';
+    let selectedNode1 = document.getElementsByClassName('content')[0];
+    let selectedNode2 = document.getElementsByClassName('content')[1];
+    const res = intersect(selectedNode1, selectedNode2);
+    console.log(res);
+</script>
+</body>
+</html>
