@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"  >
+    <channel>
+        <title>Интересные / Публикации / Хабралента</title>
+        <link>https://habrahabr.ru/feed/posts/</link>
+        <description><![CDATA[Интересные публикации из Хабраленты]]></description>
+        <language>ru</language>
+        <managingEditor>editor@habrahabr.ru</managingEditor>
+        <generator>habrahabr.ru</generator>
+        <pubDate>Wed, 21 Mar 2018 20:31:24 GMT</pubDate>
+        <lastBuildDate></lastBuildDate>
+        <image>
+            <link>https://habrahabr.ru/</link>
+            <url>https://habrahabr.ru/images/logo.png</url>
+            <title>Хабрахабр</title>
+        </image>
+
+
+
+
+
+        <item>
+            <title><![CDATA[[Перевод] Четыре уровня одностраничных приложений, о которых вам нужно знать]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351710/</guid>
+            <link>https://habrahabr.ru/post/351710/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351710</link>
+            <description><![CDATA[<p><img src="https://habrastorage.org/webt/8v/ck/hv/8vckhvqca44x9c5d4kbzrss-ro4.jpeg" alt="image"></p><br>
+<p>В этой статье мы с нуля разработаем React-приложение, обсудим домен и его сервисы, хранение, сервисы приложения и представление (view).</p> <a href="https://habrahabr.ru/post/351710/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351710#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 19:39:39 GMT</pubDate>
+            <dc:creator>AloneCoder</dc:creator>
+            <category><![CDATA[Высокая производительность]]></category><category><![CDATA[Анализ и проектирование систем]]></category><category><![CDATA[ReactJS]]></category><category><![CDATA[JavaScript]]></category><category><![CDATA[Блог компании Mail.Ru Group]]></category>
+            <category>reactjs</category><category>spa</category><category>никто не читает теги</category>
+        </item>
+
+
+
+        <item>
+            <title><![CDATA[Интеллектуальная обработка текстов]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351732/</guid>
+            <link>https://habrahabr.ru/post/351732/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351732</link>
+            <description><![CDATA[Работы, связанные с естественным языком, — это одна из ключевых задач для создания искусственного интеллекта. Их сложность долгое время сильно недооценивали. Одной из причин для раннего оптимизма в области естественного языка были пионерские работы Ноама Хомского о порождающих грамматиках. В своей книге «Синтаксические структуры» и других работах Хомский предложил идею, которая сейчас кажется совершенно обычной, но тогда произвела революцию: он преобразовал предложение на естественном языке в дерево, которое показывает, в каких отношениях находятся разные слова в предложении.<br>
+<a href="https://habrahabr.ru/company/piter/blog/351732/"><div style="text-align:center;"><img src="https://habrastorage.org/webt/oj/sl/yw/ojslywiehxdx7nye_gy9ldyflra.png" alt="image"></div></a><br>
+Пример дерева синтаксического разбора показан на рисунке выше (а — синтаксический анализ на основе структуры непосредственных составляющих; б — на основе грамматики зависимостей). Порождающая грамматика — это набор правил вида S → NP V P или V P → V NP, которыми можно порождать такие деревья. На деревьях синтаксического разбора можно строить довольно строгие конструкции, пытаться определять, например, логику естественного языка, с настоящими аксиомами и правилами вывода.<br> <a href="https://habrahabr.ru/post/351732/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351732#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 13:03:18 GMT</pubDate>
+            <dc:creator>ph_piter</dc:creator>
+            <category><![CDATA[Профессиональная литература]]></category><category><![CDATA[Машинное обучение]]></category><category><![CDATA[Алгоритмы]]></category><category><![CDATA[Блог компании Издательский дом «Питер»]]></category>
+            <category><![CDATA[книги]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[Ищем причины тормозов БД, используя sys schema в MySQL 5.7]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351740/</guid>
+            <link>https://habrahabr.ru/post/351740/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351740</link>
+            <description><![CDATA[Есть у нас веб-приложение. Относительно большое и старое — много-много кода, в котором много-много разных запросов к базе данных. При этом мы не гугл, но несколько тысяч запросов в секунду на сервер БД приходится. <br>
+<br>
+Ну и безусловно растёт наше приложение во все стороны — добавляются новые фичи, наворачиваются и усложняются старые, растёт количество клиентов и соответственно количество данных в БД. И в один не очень прекрасный момент приходит понимание, что что-то наше приложение тормозит. А значит надо или найти, что именно нагружает БД, хотя могло бы не нагружать, ну или если ничего такого нет, то взять ещё серверов побольше, да помощнее.<br>
+<br>
+Стандартный совет как найти, что нагружает MySQL — включить slow-query-log и посмотреть, какие запросы будут туда попадать. Но в MySQL 5.7 по умолчанию присутствует куда лучший инструмент — <a href="https://dev.mysql.com/doc/refman/5.7/en/sys-schema.html">sys schema</a>, которая агрегирует данные из performance schema и позволяет их получить простыми запросами, буквально вида «Ok, MySQL, покажи мне топ запросов по максимальному суммарному времени выполнения»<br> <a href="https://habrahabr.ru/post/351740/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351740#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 13:30:32 GMT</pubDate>
+            <dc:creator>darvecher</dc:creator>
+            <category><![CDATA[MySQL]]></category>
+            <category><![CDATA[mysql]]></category><category><![CDATA[mysql performance]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[Компания LG объявила о выпуске открытой платформы WebOS Open Source Edition]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351670/</guid>
+            <link>https://habrahabr.ru/post/351670/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351670</link>
+            <description><![CDATA[<p>LG Electronics сообщила о доступности <em>webOS</em> Open Source Edition, рассчитанной главным образом на разработчиков, разрешив другим компаниям использовать ее в своих устройствах. Это дает возможность другим компаниям задействовать <em>webOS</em> Open Source Edition в своих продуктах: телевизоры, IoT устройства, планшеты, или смартфоны.</p><br>
+<p><img src="https://habrastorage.org/webt/wu/da/bl/wudablmndxcio4kf8wfeyydqg80.png" alt="palm"></p><br>
+<p>Версия 1.0 новоиспеченной webOS OSE оптимизирована для Raspberry Pi 3, однако поддержка новых платформ не за горами. <a href="http://webosose.org/discover/setting/requirements/">Страница настройки</a> содержит инструкции по сборке прошивки для загрузки с microSD карты. Для сборки необходима Ubuntu 14.04 LTS 64-bit, 4-х ядерный процессор Intel Core i5, 8 GiB ОЗУ и 100 GiB дискового пространства.</p> <a href="https://habrahabr.ru/post/351670/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351670#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 13:58:41 GMT</pubDate>
+            <dc:creator>temujin</dc:creator>
+            <category><![CDATA[Разработка под Linux]]></category><category><![CDATA[Разработка мобильных приложений]]></category><category><![CDATA[Qt]]></category><category><![CDATA[Open source]]></category>
+            <category><![CDATA[webos]]></category><category><![CDATA[lg]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[История ES6-модулей]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351704/</guid>
+            <link>https://habrahabr.ru/post/351704/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351704</link>
+            <description><![CDATA[<i>Владислав Власов, инженер-программист в <a href="http://www.developersoft.ru/">Developer Soft</a> и преподаватель курса <a href="https://netology.ru/?utm_source=blog&amp;utm_medium=747&amp;utm_campaign=habr">Нетологии</a>, специально для блога написал цикл статей о EcmaScript6. В <a href="https://habrahabr.ru/company/netologyru/blog/347516/">первой части</a> на примерах рассмотрели динамический анализ кода в EcmaScript с помощью Iroh.js, во <a href="https://habrahabr.ru/company/netologyru/blog/348632/">второй</a> сосредоточились на реализации отменяемых Promises. В этой статье поговорим об истории ES6-модулей.</i><br>
+<br>
+<a href="https://habrahabr.ru/company/netologyru/blog/351704/"><img src="https://habrastorage.org/webt/t6/nw/0q/t6nw0qfsu2febrc2_yswaq6gsga.jpeg"></a><br>
+<br>
+История языка EcmaScript простирается от простого языка сценариев в браузере вплоть до современного языка общего назначения, работающего в различных хост-окружениях. Вместе с усложнением языка появилась и необходимость организации модульной структуры и переиспользования кода с помещением его в библиотеки. Первые библиотеки импортировались за счет загрузки соответствующего JS-файла с хоста поставщика или CDN, а взаимодействие производилось, как правило, посредством экспорта функций и классов с заранее известными именами в глобальное пространство — объект window.<br> <a href="https://habrahabr.ru/post/351704/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351704#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 13:49:56 GMT</pubDate>
+            <dc:creator>blognetology</dc:creator>
+            <category><![CDATA[Разработка веб-сайтов]]></category><category><![CDATA[JavaScript]]></category><category><![CDATA[Блог компании Нетология]]></category>
+            <category><![CDATA[ecmascript]]></category><category><![CDATA[ecmascript 6]]></category><category><![CDATA[javascript]]></category><category><![CDATA[модули]]></category><category><![CDATA[нетология]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[Дизайн-система. Определение понятия]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351726/</guid>
+            <link>https://habrahabr.ru/post/351726/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351726</link>
+            <description><![CDATA[<img src="https://habrastorage.org/webt/1j/u1/e3/1ju1e3s0wyifnm8e2fu_-ecjz8s.png"><br>
+<br>
+В российском дизайн-сообществе сформировалось и все чаще встречается мнение о том, что возникший в последние годы хайп вокруг дизайн-систем — не более, чем пузырь, раздутый вокруг давно существующей темы, а вовлеченные в это дело авторы спекулируют на старых понятиях.<br> <a href="https://habrahabr.ru/post/351726/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351726#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 12:52:09 GMT</pubDate>
+            <dc:creator>ASundiev</dc:creator>
+            <category><![CDATA[Интерфейсы]]></category><category><![CDATA[Веб-дизайн]]></category><category><![CDATA[Usability]]></category><category><![CDATA[Блог компании Mail.Ru Group]]></category>
+            <category><![CDATA[дизайн-системы]]></category><category><![CDATA[унификация]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[24 марта, Москва – CocoaHeads Special Event]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351718/</guid>
+            <link>https://habrahabr.ru/post/351718/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351718</link>
+            <description><![CDATA[Привет, Хабр!<br>
+<br>
+В эту субботу, 24 марта, пройдет полезное и интересное для всех iOS-разработчиков мероприятие – CocoaHeads Special Event.<br>
+<br>
+<a href="https://habrahabr.ru/company/alfa/blog/351718/"><div style="text-align:center;"><img src="https://habrastorage.org/webt/mx/ki/k_/mxkik_0uazqp-nzbczlrgigor_e.jpeg"></div></a><br>
+Нас там будет представлять Илья <a href="https://habrahabr.ru/users/iltsarev/" class="user_link">iltsarev</a> Царев, Head of iOS Альфа-Банка с докладом про итеративную разработку «Feedback Driven Development».<br>
+<br>
+А теперь подробности.<br> <a href="https://habrahabr.ru/post/351718/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351718#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 11:55:16 GMT</pubDate>
+            <dc:creator>D_Halli</dc:creator>
+            <category><![CDATA[Разработка под iOS]]></category><category><![CDATA[Разработка мобильных приложений]]></category><category><![CDATA[Cocoa]]></category><category><![CDATA[Блог компании «Альфа-Банк»]]></category>
+            <category><![CDATA[cocoa]]></category><category><![CDATA[альфа-банк]]></category><category><![CDATA[ios]]></category><category><![CDATA[mail.ru group]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[Полезное дизайнеру & разработчику. Свежие утилиты и инструменты для ускорения работы. Выпуск № 10]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351690/</guid>
+            <link>https://habrahabr.ru/post/351690/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351690</link>
+            <description><![CDATA[<a href="https://habrahabr.ru/post/351690/"><img src="https://habrastorage.org/webt/gg/ir/4j/ggir4jlxgixvev9jb0jbylc-dwq.png"></a><br>
+<br>
+10-й «Юбилейный» выпуск полезных штук для дизайнеров и разработчиков. Сегодня в выпуске <b>31 ссылка</b> на всякие свежие полезности. Больше добавить нечего → изучайте сами и делитесь с друзьями!<br> <a href="https://habrahabr.ru/post/351690/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351690#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 10:21:40 GMT</pubDate>
+            <dc:creator>kamushken</dc:creator>
+            <category><![CDATA[Разработка мобильных приложений]]></category><category><![CDATA[Разработка веб-сайтов]]></category><category><![CDATA[Интерфейсы]]></category><category><![CDATA[Дизайн мобильных приложений]]></category><category><![CDATA[Веб-дизайн]]></category>
+            <category><![CDATA[фигма]]></category><category><![CDATA[figma]]></category><category><![CDATA[ui]]></category><category><![CDATA[design]]></category><category><![CDATA[sketch]]></category><category><![CDATA[plugin]]></category><category><![CDATA[дайджест]]></category><category><![CDATA[новинки]]></category><category><![CDATA[бесплатно]]></category><category><![CDATA[скачать]]></category><category><![CDATA[github]]></category><category><![CDATA[icons]]></category><category><![CDATA[иконки]]></category><category><![CDATA[разработка]]></category><category><![CDATA[development]]></category><category><![CDATA[ux]]></category><category><![CDATA[утилиты]]></category><category><![CDATA[webtools]]></category><category><![CDATA[tools]]></category><category><![CDATA[опрос]]></category><category><![CDATA[survey]]></category><category><![CDATA[bootstrap]]></category><category><![CDATA[бутстрап]]></category><category><![CDATA[конструктор]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[Java 10 General Availability]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351694/</guid>
+            <link>https://habrahabr.ru/post/351694/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351694</link>
+            <description><![CDATA[<img src="https://habrastorage.org/webt/2a/ng/ft/2angftoxwh_stepvtvcc6kswfje.png"><br>
+<blockquote><a href="http://jdk.java.net/10/">Ссылка для скачивания</a></blockquote><p>Последнюю половину года мы подробно обсуждали здесь новшества Java 10 и знаем их наизусть.<br>
+<br>
+Но было бы странно, если самая главная Java-новость за полгода не появилась бы в этом хабе.<br>
+</p><br>
+<p>Как говорится, просто оставлю это здесь. Вперёд к приключениям!</p> <a href="https://habrahabr.ru/post/351694/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351694#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 10:32:45 GMT</pubDate>
+            <dc:creator>olegchir</dc:creator>
+            <category><![CDATA[Java]]></category><category><![CDATA[Блог компании JUG.ru Group]]></category>
+            <category><![CDATA[java]]></category><category><![CDATA[openjdk]]></category><category><![CDATA[java 10]]></category><category><![CDATA[java10]]></category><category><![CDATA[openjdk 10]]></category><category><![CDATA[openjdk10]]></category><category><![CDATA[jdk 10]]></category><category><![CDATA[jdk10]]></category><category><![CDATA[jpoint]]></category><category><![CDATA[jpoint2018]]></category>
+        </item>
+
+
+
+
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[[Перевод] Самые распространённые вопросы на собеседовании программиста графики]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351698/</guid>
+            <link>https://habrahabr.ru/post/351698/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351698</link>
+            <description><![CDATA[Недавно я проходил собеседования в игровых студиях на младшего программиста графики. По итогу я узнал, каких навыков они ожидают от начинающего программиста и какие вопросы могут задать. В этой статье я собрал вопросы в удобный список. Смысл в том, чтобы другие начинающие программисты могли использовать его для подготовки, прежде чем идти на первое собеседование. Но хочу оговориться, что <b>я не рекомендую просто запоминать ответы на эти вопросы</b>. Темы в списке — это темы, которые следует понять и освоить, чтобы решать реальные проблемы программирования графики. Их нужно понять, а не запомнить ответы.<br>
+<br>
+Вопросы делятся по темам: <b>С++, математика, оптимизация и компьютерная графика</b>. Очевидно, это главные темы в повседневной работе. C++ часто используется в реальных задачах, поэтому естественно, что на собеседовании задают много вопросов по нему. Кроме того, в программировании графики требуется лучшее знание математики, чем в большинстве других видов программирования, поэтому математические навыки имеют первостепенное значение. Наконец, для достижения 60 FPS и рендеринга с высокой графической точностью обязательными являются сильные навыки оптимизации. Давайте рассмотрим популярные вопросы в каждой категории.<br> <a href="https://habrahabr.ru/post/351698/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351698#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 08:41:39 GMT</pubDate>
+            <dc:creator>m1rko</dc:creator>
+            <category><![CDATA[Разработка игр]]></category><category><![CDATA[Работа с 3D-графикой]]></category><category><![CDATA[Математика]]></category><category><![CDATA[Карьера в IT-индустрии]]></category><category><![CDATA[C++]]></category>
+            <category>компьютерная графика</category><category>разработка игр</category><category>джун</category><category>начининающий программист</category><category>junior</category><category>собеседование</category><category>вопросы для собеседования</category><category>игровые студии</category>
+        </item>
+
+
+
+
+
+        <item>
+            <title><![CDATA[[Из песочницы] Большой комок грязи]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351686/</guid>
+            <link>https://habrahabr.ru/post/351686/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351686</link>
+            <description><![CDATA[Привет, Хабр! Представляю вашему вниманию перевод статьи &quot;<a href="http://www.laputan.org/mud/">Big Ball of Mud</a>&quot; авторов Brian Foote и Joseph Yoder.<br/>
+<br/>
+<i>От переводчика: Статья Big Ball of Mud написана Брайаном Футе и Джозефом Йодером летом 1999 года. Она рассказывает о наиболее распространённых антипаттернах разработки ПО, причине их возникновения и развития. Несмотря на то, что с момента публикации прошло больше 18 лет, описанные проблемы никуда не пропали, так что большая часть написанного актуальна и по сей день. Это первая часть статьи из трёх, остальные я надеюсь выложить в ближайшее время.</i><br/>
+<br/>
+<h2>Введение </h2><br/>
+В последние годы сразу несколько авторов [Garlan и Shaw, 1993] [Shaw, 1996] [Buschmann и другие, 1996] [Meszaros, 1997] представили паттерны, которые характеризуют архитектуру ПО высокого уровня, например, PIPELINE (конвейер) и LAYERED ARCHITECTURE (многоуровневая архитектура). <br/>
+<br/>
+В идеальном мире все системы были бы образцом одного или более подобных шаблонов высокого уровня. Тем не менее, в реальной жизни все не так. Архитектура, которая на данный момент является доминирующий, до сегодняшнего дня ещё не обсуждалась. Речь идет о BIG BALL OF MUD или БОЛЬШОМ КОМКЕ ГРЯЗИ.<br/>
+ <a href="https://habrahabr.ru/post/351686/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351686#habracut">Читать дальше &rarr;</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 06:52:54 GMT</pubDate>
+            <dc:creator>Arkronus</dc:creator>
+            <category><![CDATA[Управление разработкой]]></category><category><![CDATA[Проектирование и рефакторинг]]></category><category><![CDATA[Анализ и проектирование систем]]></category>
+            <category>архитектура приложений</category><category>антипаттерны</category>
+        </item>
+
+
+
+
+
+        <item>
+            <title><![CDATA[Сисадмину нужны длинные руки]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351688/</guid>
+            <link>https://habrahabr.ru/post/351688/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351688</link>
+            <description><![CDATA[Пару лет назад мы писали об ITSM-системах, сравнивая их с всевидящим оком сисадмина и даже с бубном. Реалии изменились. Информационная безопасность стала объектом острого внимания не только <s>межгалактических</s> крупных корпораций, но даже малого и среднего бизнеса. Слишком много рисков окружают компании в киберпространстве, самый опасный и очевидный из них — человеческий фактор, связанный с сотрудниками. Они могут вредить умышленно, могут по недомыслию, но всегда с каким-либо ущербом. В общем, за ними нужен глаз да глаз. Без специального софта здесь не обойтись. Так какими они должны быть, длинные руки системного администратора?<br>
+<br>
+<a href="https://habrahabr.ru/company/alloy_software/blog/351688/"><div style="text-align:center;"><img src="https://habrastorage.org/getpro/habr/post_images/1b0/82b/2fe/1b082b2fe25a2883493fb9918b95c033.png"></div></a> <a href="https://habrahabr.ru/post/351688/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351688#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 07:26:21 GMT</pubDate>
+            <dc:creator>ArsenyMeshkov</dc:creator>
+            <category><![CDATA[Системное администрирование]]></category><category><![CDATA[Серверное администрирование]]></category><category><![CDATA[Информационная безопасность]]></category><category><![CDATA[IT-инфраструктура]]></category><category><![CDATA[Блог компании Alloy Software]]></category>
+            <category><![CDATA[it-инфраструктура]]></category><category><![CDATA[itsm]]></category><category><![CDATA[itil]]></category><category><![CDATA[itsm-система]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[Graal: как использовать новый JIT-компилятор JVM в реальной жизни]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351682/</guid>
+            <link>https://habrahabr.ru/post/351682/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351682</link>
+            <description><![CDATA[На главной сибирской Java-конференции <a href="https://2018.jbreak.ru/">JBreak-2018</a>, проходившей в Новосибирске, Christian Thalinger из <a href="https://twitter.com/">Twitter</a> поделился практическим опытом использования Graal. Этот доклад мы слушали всей рабочей группой в полном составе. Вполне объяснимо, если учесть тот факт, что Graal по-прежнему считается смелым и потенциально опасным экспериментом (хотя очень похоже, что он войдёт в JDK 10). Было очень интересно узнать, как эта новинка проявляет себя в бою — да не где-нибудь, а в разработке такого уровня.<br>
+<br>
+<img src="https://habrastorage.org/webt/f1/_3/ta/f1_3taqo6b3fbkimdqnkzu9ox8e.jpeg"><br>
+<br>
+Кристиан Талингер десяток с лишним лет работает с виртуальными машинами Java, причём ключевой навык в его экспертизе — как раз JIT-компиляторы. Именно Кристиан внедрил Graal и стал инициатором его нынешнего (весьма, по словам Криса, активного) использования в продакшн-среде Twitter. И, если верить Талингеру, это нововведение сохраняет компании приличные деньги за счёт экономии железных ресурсов.<br> <a href="https://habrahabr.ru/post/351682/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351682#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 04:37:45 GMT</pubDate>
+            <dc:creator>DualOne</dc:creator>
+            <category><![CDATA[Программирование]]></category><category><![CDATA[Java]]></category><category><![CDATA[Блог компании Петер-Сервис]]></category>
+            <category><![CDATA[java 9]]></category><category><![CDATA[jit-компилятор]]></category><category><![CDATA[graal]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[DNSCrypt 2.0 и блокировка рекламы]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351664/</guid>
+            <link>https://habrahabr.ru/post/351664/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351664</link>
+            <description><![CDATA[В этой статье хотелось бы рассмотреть нововведения Dnscrypt, на конкретном примере, который наверняка окажется для кого-то полезным.<br>
+<br>
+Для тех, кто не знает, Dnscrypt — это уникальный протокол шифрования DNS-трафика. Он даёт возможность защитить DNS-коммуникации от перехватов и подмены, и к примеру, обойти блокировки реализуемые на уровне DNS-запросов.<br>
+<br>
+Из основных возможностей новой версии, прежде всего, хочется отметить возможность коммуникации с сервером по протоколу TCP, что делает такой канал более стабильным и менее заметным.<br>
+<br>
+В этой статье, воспользуемся этим преимуществом и для разнообразия/пользы ограничим доступ к рекламным доменам.<br>
+<br>
+<h2>Dnscrypt-proxy</h2><br>
+В новой версии, переписанной автором на языке Go, настройки Dnscrypt-proxy хранятся в конфигурационном файле «dnscrypt-proxy.toml». Рассмотрим только интересующие параметры:<br>
+<br>
+<pre><code class="bash"># Значение true включит проверку DNSSEC
+require_dnssec = false
+# Значение true позволит прокси серверу выполнять DNS-запросы по TCP.
+force_tcp = false
+# Здесь можно указать незашифрованный DNS-сервер, который будет использоваться в случае недоступности сервера DNSCrypt.
+fallback_resolver = '9.9.9.9:53'
+</code></pre><br>
+К слову, теперь DNSCrypt кэширует запросы и обновляет список серверов без необходимости какой-либо дополнительной настройки.<br> <a href="https://habrahabr.ru/post/351664/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351664#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Tue, 20 Mar 2018 18:33:38 GMT</pubDate>
+            <dc:creator>cybran24</dc:creator>
+            <category><![CDATA[Спам и антиспам]]></category><category><![CDATA[Серверное администрирование]]></category><category><![CDATA[Настройка Linux]]></category><category><![CDATA[Информационная безопасность]]></category><category><![CDATA[DNS]]></category>
+            <category><![CDATA[dnscrypt]]></category><category><![CDATA[linux]]></category><category><![CDATA[adblock]]></category><category><![CDATA[security]]></category><category><![CDATA[dns]]></category>
+        </item>
+
+
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[[Из песочницы] Паттерны проектирования в Cocos2d-x]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351666/</guid>
+            <link>https://habrahabr.ru/post/351666/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351666</link>
+            <description><![CDATA[Привет, Хабр! Представляю вашем вниманию перевод статьи "<a href="https://dzone.com/articles/design-patterns-in-cocos2d-x">Design Patterns in Cocos2d-x</a>" автора Aleksei Pinchuk.<br>
+<br>
+Статья будет интересна для разработчиков Cocos2d-x и тех, кто изучает паттерны. Она выполнена в форме краткого конспекта, в котором можно быстро посмотреть где применяется тот или иной паттерн в Cocos2d-x. Целью статьи не является полное описание каждого паттерна.<br> <a href="https://habrahabr.ru/post/351666/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351666#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Tue, 20 Mar 2018 18:57:31 GMT</pubDate>
+            <dc:creator>BillPearson</dc:creator>
+            <category><![CDATA[Разработка игр]]></category><category><![CDATA[Проектирование и рефакторинг]]></category><category><![CDATA[Программирование]]></category>
+            <category>cocos2d-x</category><category>patterns</category><category>Creational Patterns</category><category>Prototype</category><category>Singleton</category><category>Structural Patterns</category><category>Flyweight</category><category>Bridge</category><category>Composite</category><category>Behavioral</category><category>Command</category><category>Observer</category><category>Decoupling Patterns</category><category>Component</category><category>Optimization Patterns</category><category>Data Locality</category><category>Dirty Flag</category><category>паттерны</category><category>ооп</category><category>шаблоны проектирования</category>
+        </item>
+
+
+
+
+
+        <item>
+            <title><![CDATA[Документирование API — документация из тестов]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351660/</guid>
+            <link>https://habrahabr.ru/post/351660/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351660</link>
+            <description><![CDATA[Пост в продолжение <a href="https://habrahabr.ru/post/350382/">темы экспериментальных решений</a>, откуда будет переиспользован код для примера. В прошлом посте я затронул тему, как можно написать тесты на простой сервис, когда он выступает в роли черного ящика и из кода теста у нас нет прямого доступа к коду тестируемой программы. Ещё раз остановлюсь на том, что тестируемый сервис был реализован на языке Go, а тесты к сервису на языке Ruby и фрэймворке для тестирования RSpec. Стэк был выбран из собственных предпочтений и не имеет ключевого значения к рассматриваемой теме. В этой статье хочу рассмотреть вопрос документирования API, вновь используя не совсем стандартное решение.<br> <a href="https://habrahabr.ru/post/351660/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351660#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Wed, 21 Mar 2018 04:55:44 GMT</pubDate>
+            <dc:creator>ZurgInq</dc:creator>
+            <category><![CDATA[Тестирование веб-сервисов]]></category><category><![CDATA[Программирование]]></category>
+            <category><![CDATA[swagger]]></category><category><![CDATA[rspec]]></category><category><![CDATA[документация]]></category><category><![CDATA[тестирование]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[О портировании проекта MIPSfpga]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351672/</guid>
+            <link>https://habrahabr.ru/post/351672/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351672</link>
+            <description><![CDATA[<img src="https://habrastorage.org/webt/fn/xr/oy/fnxroyfjcdijovjcifcbnaqm298.png"><br>
+<br>
+Перенос программного обеспечения с одной компьютерной архитектуры на другую в принципе, с некоторыми оговорками, дело относительно простое. Здесь на помощь приходят такие общеизвестные инструменты, как autoconf / automake/ libtool / gnulib. Собрать программу из исходников на каком нибудь Raspberry/ARM бывает так же просто, как и на ПК с Ubuntu/x86-64.<br>
+<br>
+А вот как заставить проект ПЛИС разработанный для одной платы работать на другой плате? Там и сама ПЛИС может быть другой и на плате совершенно другие компоненты могут стоять. Простой перекомпиляцией проекта не обойтись.<br>
+<br>
+Расскажу о своем опыте портирования проекта MIPSfpga для платы Марсоход3 с ПЛИС MAX10 Intel. Статьи о проекте MIPSfpga неоднократно появлялись на хабре. Они были так интересны, что мне захотелось и самому попробовать этот проект в имеющейся у меня плате. В своей работе я опирался на хабровские статьи <br>
+<br>
+<ul>
+<li><a href="https://habrahabr.ru/post/275215/">Как начать работать с MIPSfpga</a> </li>
+<li><a href="https://habrahabr.ru/post/335848/">MIPSfpga – практический опыт</a></li>
+<li><a href="https://habrahabr.ru/post/322442/">MIPSfpga и внутрисхемная отладка</a></li>
+</ul><br>
+И многие другие…<br>
+<br>
+Итак, что нужно сделать, чтобы портировать проект ПЛИС на другую плату? <a href="https://habrahabr.ru/post/351672/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351672#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Tue, 20 Mar 2018 19:57:25 GMT</pubDate>
+            <dc:creator>nckma</dc:creator>
+            <category><![CDATA[Программирование микроконтроллеров]]></category><category><![CDATA[Отладка]]></category><category><![CDATA[Анализ и проектирование систем]]></category><category><![CDATA[FPGA]]></category>
+            <category><![CDATA[MIPSfpga]]></category><category><![CDATA[Марсоход3]]></category><category><![CDATA[virtual LEDs]]></category><category><![CDATA[Quartus]]></category><category><![CDATA[Altera]]></category><category><![CDATA[FPGA]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[Конференция DEFCON 17. «Украсть прибыль у спамеров: как я перестал беспокоиться о спаме и полюбил его». Грант Джордан]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351680/</guid>
+            <link>https://habrahabr.ru/post/351680/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351680</link>
+            <description><![CDATA[Перед тем, как рассказать о нашем проекте, я хочу рассказать Вам, кто такой я, Грант Джордан, и кто такой Кайл Вогт (Kyle Vogt), который работает на Justin.tv. Мы студенты Массачусетского Технологического института, у которых много свободного времени. И у нас есть множество интересных проектов, как например, устройство для взлома сейфов, которое позволяет открывать сейфы с наивысшей степенью защиты. Однако понять, почему мы занялись именно спамом, поможет ответ на вопрос: кем мы не являемся?<br>
+<br>
+Мы не являемся экспертами биржевого рынка, спамерами или людьми, которые внезапно разбогатели, играя на бирже. Поэтому всё, что я буду говорить о биржевом рынке и о спаме, является взглядом извне, то есть опытом людей, не имеющим к этому непосредственного отношения. Когда мы стали этим заниматься, всё выглядело словно сквозь пузырьки от газировки, и поэтому проект отражает наш взгляд на вещи именно в то время. У нас было слишком мало информации, мы не представляли себе, как работает ботнет, как им управляют спамеры и каким образом они рассылают информацию на Ваш почтовый ящик.<br>
+<br>
+Каждый раз, открывая Вашу почту, Вы находите там спам. Это советы, как увеличить размер пениса, или письма от «плохих» девочек из России, или уведомление, в котором бывший принц Нигерии сообщает, что сделал Вас наследником своих миллионов. Однако один вид спама привлекал внимание больше других – это был спам о фондовом рынке. Это были странные «подсказки», призывающие купить определённые акции, курс которых вот-вот подскочит «выше крыши». Как и большинство людей, я удалял этот спам, но однажды Кайл родил одну из самых глупых идей, которые я когда-либо встречал: «Должен же быть способ, который поможет нам отобрать часть денег этих самых спамеров»! <a href="https://habrahabr.ru/post/351680/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351680#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Tue, 20 Mar 2018 21:55:02 GMT</pubDate>
+            <dc:creator>HostingManager</dc:creator>
+            <category><![CDATA[Спам и антиспам]]></category><category><![CDATA[Программирование]]></category><category><![CDATA[Конференции]]></category><category><![CDATA[Информационная безопасность]]></category><category><![CDATA[Блог компании ua-hosting.company]]></category>
+            <category><![CDATA[Спам]]></category><category><![CDATA[ботнет]]></category>
+        </item>
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[Hessian-Free оптимизация с помощью TensorFlow]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/350794/</guid>
+            <link>https://habrahabr.ru/post/350794/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=350794</link>
+            <description><![CDATA[Добрый день! Я хочу рассказать про метод оптимизации известный под названием Hessian-Free или Truncated Newton (Усеченный Метод Ньютона) и про его реализацию с помощью библиотеки глубокого обучения — TensorFlow. Он использует преимущества методов оптимизации второго порядка и при этом нет необходимости считать матрицу вторых производных. В данной статье описан сам алгоритм HF, а так же представлена его работа для обучения сети прямого распространения на MNIST и XOR датасетах.<br>
+<img src="https://habrastorage.org/webt/8j/oq/gh/8joqghgsahubeydfxgg50mehlm8.jpeg"><br> <a href="https://habrahabr.ru/post/350794/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=350794#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Tue, 20 Mar 2018 17:11:40 GMT</pubDate>
+            <dc:creator>M00nL1ght</dc:creator>
+            <category><![CDATA[Программирование]]></category><category><![CDATA[Машинное обучение]]></category><category><![CDATA[Математика]]></category><category><![CDATA[Алгоритмы]]></category><category><![CDATA[Python]]></category>
+            <category><![CDATA[machine learning]]></category><category><![CDATA[python]]></category><category><![CDATA[tensorflow]]></category><category><![CDATA[алгоритмы]]></category><category><![CDATA[математика]]></category><category><![CDATA[программирование]]></category><category><![CDATA[hessian-free оптимизация]]></category>
+        </item>
+
+
+
+
+
+
+
+
+
+
+
+        <item>
+            <title><![CDATA[[Перевод] Компьютерное зрение и Интернет вещей]]></title>
+            <guid isPermaLink="true">https://habrahabr.ru/post/351460/</guid>
+            <link>https://habrahabr.ru/post/351460/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351460</link>
+            <description><![CDATA[<img src="https://habrastorage.org/webt/ip/uu/ek/ipuuekwrmr9sk-bgouk-k7c1swi.jpeg"><br>
+<br>
+Компьютеры, роботы, искусственный интеллект… В основе многих передовых технологий лежала необходимость воспроизведения или имитации человеческого мышления, чувств и поведения.<br>
+<br>
+Различные датчики, например, акустические и видеосенсоры, а также датчики давления, были созданы после того, как мы разобрались, как устроены наши собственные слух и зрение, как мы воспринимаем давление.<br>
+<br>
+Несомненно, одним из главных для человека органом чувств является зрение. Благодаря ему мы можем видеть среду, в которой находимся, интерпретировать и анализировать ситуацию, предпринимать адекватные действия.<br> <a href="https://habrahabr.ru/post/351460/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=351460#habracut">Читать дальше →</a>]]></description>
+
+            <pubDate>Tue, 20 Mar 2018 08:18:28 GMT</pubDate>
+            <dc:creator>ICLServices</dc:creator>
+            <category><![CDATA[Терминология IT]]></category><category><![CDATA[Разработка для интернета вещей]]></category><category><![CDATA[Работа с видео]]></category><category><![CDATA[Исследования и прогнозы в IT]]></category><category><![CDATA[Блог компании ICL Services]]></category>
+            <category>машинное обучение</category><category>компьютерное зрение</category><category>internet of things</category><category>видеоаналитика</category><category>видеосенсоры</category>
+        </item>
+
+
+
+
+
+
+
+    </channel>
+</rss>
