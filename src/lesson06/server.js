@@ -23,22 +23,42 @@ promiseReadFile(FILE).
         return promiseMongoConnect('mongodb://localhost:27017/')
             .then(database => {
                 const dbo = database.db('otus');
-                items.forEach(item => {
-                    dbo.collection('habrahabr').insertOne({
-                        guid: item.guid[0],
-                        title: item.title[0],
-                        link: item.link[0],
-                        description: item.description[0],
-                        publishedDate: item.pubDate[0],
-                        category: item.category,
-                        creator: item['dc:creator']
-                    })
+                const habraCollection = dbo.collection('habrahabr');
+                return Promise.all(insertItems(habraCollection, items)).then((cnt) => {
+                    const reducer = (acc, val) => acc + val;
+                    const inserted = cnt.reduce(reducer);
+                    return { processed :items.length, inserted};
                 });
 
-                return items.length;
             }).catch(err => {
                 console.log(err);
             })
-    }).then((countItems) => {
-        console.log('Import is done! ' + countItems + ' items were imported!');
+    }).then((items) => {
+        console.log('Import is done! ' + items.inserted + ' items of ' + items.processed + ' were imported!');
     });
+
+
+function insertItems(collection, items) {
+    return items.map(item => {
+        return new Promise(resolve => {
+            collection.count({ guid:  item.guid[0]._}, (err, count) => {
+                if (count > 0) {
+                    resolve(0);
+                }
+
+                collection.insertOne({
+                    guid: item.guid[0]._,
+                    title: item.title[0],
+                    link: item.link[0],
+                    description: item.description[0],
+                    publishedDate: item.pubDate[0],
+                    category: item.category,
+                    creator: item['dc:creator']
+                });
+
+                resolve(1);
+            });
+
+        })
+    });
+}
