@@ -1,2 +1,6 @@
 .vscode/*
 .idea/*
+/src/lesson06
+/src/lesson07/node_modules
+/src/lesson07/dist
+/node_modules
