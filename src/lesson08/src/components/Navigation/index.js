@@ -11,7 +11,7 @@ class Navigation extends Component {
 
     renderMenu() {
         return this.props.menu.map(item => {
-            return <a className={styles.link} key={item.key} href={item.link}>{item.name}</a>
+            return <a className={styles.link} key={item.id} href={item.link}>{item.name}</a>
         });
     }
 

@@ -4,6 +4,7 @@ class Footer extends Component {
     render() {
         return (
             <div>
+                OTUS JS Course 2018
             </div>
         );
     }
