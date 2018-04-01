@@ -1,10 +1,14 @@
-const fs = require('fs');
 const https = require('https');
 const promisify = require('util').promisify;
 const MongoClient = require('mongodb').MongoClient;
 const parseString = require('xml2js').parseString;
 
-const URL = 'https://habrahabr.ru/rss/feed/posts/6435ab455cc26ab2a3a07a52929d35cf/';
+// Example 'https://habrahabr.ru/rss/feed/posts/6435ab455cc26ab2a3a07a52929d35cf/';
+const RSS = process.argv[2];
+
+if (! RSS) {
+    throw new Error('No RSS URL provided');
+}
 
 const promiseParseXML = promisify(parseString);
 const promiseMongoConnect = promisify(MongoClient.connect);
@@ -30,17 +34,7 @@ function insertItems(collection, items) {
                 if (count > 0) {
                     resolve(0);
                 }
-
-                collection.insertOne({
-                    guid: item.guid[0]._,
-                    title: item.title[0],
-                    link: item.link[0],
-                    description: item.description[0],
-                    publishedDate: item.pubDate[0],
-                    category: item.category,
-                    creator: item['dc:creator']
-                });
-
+                collection.insertOne(transform(item));
                 resolve(1);
             });
 
@@ -48,7 +42,19 @@ function insertItems(collection, items) {
     });
 }
 
-promiseLoad(URL).
+function transform(entry) {
+    return {
+        guid: entry.guid[0]._,
+        title: entry.title[0],
+        link: entry.link[0],
+        description: entry.description[0],
+        publishedDate: entry.pubDate[0],
+        category: entry.category,
+        creator: entry['dc:creator']
+    }
+}
+
+promiseLoad(RSS).
     then(res => {
         return promiseParseXML(res);
     })
