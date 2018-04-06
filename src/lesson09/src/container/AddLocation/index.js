@@ -56,6 +56,7 @@ class AddLocation extends React.Component {
             })
             .catch(err => {
                 console.log(err);
+                alert('The information for the location was not found')
             });
 
 
